@@ -1,6 +1,11 @@
+import Part from "./Part"
+
 const Content = (props) => {
     console.log(props, "test")
-    return (<div> < h1 > {props.ourcontent} {props.secondcontent} </h1 > <h1>{props.thirdContent} {props.fourthContent}</h1> <h1>{props.fifthContent} {props.lastContent}</h1>
-    </div>)
+    return (
+        <div>
+            <Part attr={props} />
+        </div>
+    )
 }
 export default Content
