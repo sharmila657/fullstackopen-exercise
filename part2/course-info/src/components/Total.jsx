@@ -1,9 +1,8 @@
-const Total = (props) => {
-    const exercisesArray = props.parts.map((part) => part.exercises); 
-    const totalExercises = exercisesArray.reduce((total, exercises) => total + exercises, 0);
-    return (
-      <b>Total of {totalExercises} exercises</b>
-    );
-  };
-  
-  export default Total;
+const Total = ({ total }) => {
+  const totalVal = total.reduce((acc, curr) => {
+    return acc + curr.exercises;
+  }, 0);
+  return <h3>{`The total value is ${totalVal}`}</h3>;
+};
+
+export default Total;
